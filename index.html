@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="main">
+        <div class="heading">
+          <h3>Calculate Me!</h3>
+          <div class="quote">Inspired By MICROSOFT CALCULATOR</div>
+        </div>
+        <div class="screen">
+          <div class="answer"></div>
+          <div class="display">0</div>
+        </div>
+        <div class="buttons">
+          <div class="r">
+            <div class="btn" onclick="keyPressed('%')">%</div>
+            <div class="btn" onclick="keyPressed('CE')">CE</div>
+            <div class="btn" onclick="clearScreen()">C</div>
+            <div class="btn" onclick="keyPressed('bks')">&#128281;</div>
+          </div>
+          <div class="r">
+            <div class="btn" onclick="splfunc('inv')">1/x</div>
+            <div class="btn" onclick="splfunc('sq')">X<sup>2</sup></div>
+            <div class="btn" onclick="splfunc('sqrt')">√x</div>
+            <div class="btn" onclick="operator('/')">÷</div>
+          </div>
+          <div class="r">
+            <div class="btn" onclick="keyPressed('7')">7</div>
+            <div class="btn" onclick="keyPressed('8')">8</div>
+            <div class="btn" onclick="keyPressed('9')">9</div>
+            <div class="btn" onclick="operator('*')">&#10006;</div>
+          </div>
+          <div class="r">
+            <div class="btn" onclick="keyPressed('4')">4</div>
+            <div class="btn" onclick="keyPressed('5')">5</div>
+            <div class="btn" onclick="keyPressed('6')">6</div>
+            <div class="btn" onclick="operator('-')">-</div>
+          </div>
+          <div class="r">
+            <div class="btn" onclick="keyPressed('1')">1</div>
+            <div class="btn" onclick="keyPressed('2')">2</div>
+            <div class="btn" onclick="keyPressed('3')">3</div>
+            <div class="btn" onclick="operator('+')">+</div>
+          </div>
+          <div class="r">
+            <div class="btn" onclick="keyPressed('neg')">+/-</div>
+            <div class="btn" onclick="keyPressed('0')">0</div>
+            <div class="btn" onclick="keyPressed('.')">.</div>
+            <div class="btn" onclick="equalto()">=</div>
+          </div>
+        </div>
+      </div>
+      <div class="history">
+        <div class="head">History</div>
+        <div class="his_body"></div>
+        <div class="delete">
+          <div class="svg_box" title="Delete">
+            <svg
+              onclick="del()"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0,0,256,256"
+            >
+              <g
+                fill="#339af0"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <g transform="scale(10.66667,10.66667)">
+                  <path
+                    d="M10.80664,2c-0.517,0 -1.01095,0.20431 -1.37695,0.57031l-0.42969,0.42969h-5c-0.36064,-0.0051 -0.69608,0.18438 -0.87789,0.49587c-0.18181,0.3115 -0.18181,0.69676 0,1.00825c0.18181,0.3115 0.51725,0.50097 0.87789,0.49587h16c0.36064,0.0051 0.69608,-0.18438 0.87789,-0.49587c0.18181,-0.3115 0.18181,-0.69676 0,-1.00825c-0.18181,-0.3115 -0.51725,-0.50097 -0.87789,-0.49587h-5l-0.42969,-0.42969c-0.365,-0.366 -0.85995,-0.57031 -1.37695,-0.57031zM4.36523,7l1.52734,13.26367c0.132,0.99 0.98442,1.73633 1.98242,1.73633h8.24805c0.998,0 1.85138,-0.74514 1.98438,-1.74414l1.52734,-13.25586z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
